@@ -30,3 +30,9 @@ def register():
     db.session.add(user)
     db.session.commit()
     return jsonify({'message': 'User registered successfully'}), 201
+
+
+
+@app.route('/protected', methods=['GET'])
+def protected():
+    return jsonify({'message': 'working'}), 200
