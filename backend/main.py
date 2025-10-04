@@ -1,4 +1,4 @@
-from app.app import app
+from .app.app import app
 
 # from app.utils.celery_worker import celery_init_app
 # from app.utils import task

@@ -1,6 +1,6 @@
-from app.models.models import db 
-from app.config.config import Config
-from app.cache import cache
+from .app.models.models import db 
+from .app.config.config import Config
+from .app.cache import cache
 
 from flask import Flask
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
@@ -36,10 +36,10 @@ CORS(
 
 
 
-from app.resources.authentication.register import *
-from app.resources.authentication.login import *
-from app.resources.parkinglot.user_operations import *
-from app.resources.parkinglot.admin_operations import *
+from .app.resources.authentication.register import *
+from .app.resources.authentication.login import *
+from .app.resources.parkinglot.user_operations import *
+from .app.resources.parkinglot.admin_operations import *
 
 with app.app_context():
     db.create_all()
