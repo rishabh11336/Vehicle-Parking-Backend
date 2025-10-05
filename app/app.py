@@ -1,6 +1,6 @@
 from app.models.models import db 
 from app.config.config import Config
-from app.cache import cache
+# from app.cache import cache
 
 from flask import Flask
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
@@ -16,7 +16,7 @@ app.config.from_object(Config)
 db.init_app(app)
 
 jwt = JWTManager(app)
-cache.init_app(app)
+# cache.init_app(app)
 
 
 
